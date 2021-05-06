@@ -1,0 +1,82 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "7d8a052e1233b62c25e7a8e0765667c2",
+    "entities": [
+      {
+        "tableName": "theme",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`apiVersion` INTEGER NOT NULL, `themeId` INTEGER NOT NULL, `bannerUrl` TEXT NOT NULL, `colorPrimary` INTEGER NOT NULL, `colorOnPrimary` INTEGER NOT NULL, `colorSecondary` INTEGER NOT NULL, `colorOnSecondary` INTEGER NOT NULL, `colorBackground` INTEGER NOT NULL, `colorOnBackground` INTEGER NOT NULL, PRIMARY KEY(`apiVersion`))",
+        "fields": [
+          {
+            "fieldPath": "apiVersion",
+            "columnName": "apiVersion",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "themeId",
+            "columnName": "themeId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bannerUrl",
+            "columnName": "bannerUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "colorPrimary",
+            "columnName": "colorPrimary",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "colorOnPrimary",
+            "columnName": "colorOnPrimary",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "colorSecondary",
+            "columnName": "colorSecondary",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "colorOnSecondary",
+            "columnName": "colorOnSecondary",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "colorBackground",
+            "columnName": "colorBackground",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "colorOnBackground",
+            "columnName": "colorOnBackground",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "apiVersion"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '7d8a052e1233b62c25e7a8e0765667c2')"
+    ]
+  }
+}
