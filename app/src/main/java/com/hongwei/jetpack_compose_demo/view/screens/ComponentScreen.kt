@@ -15,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.hongwei.jetpack_compose_demo.view.components.MultipleChoiceComponents
 import com.hongwei.jetpack_compose_demo.view.components.ProgressiveComponents
+import com.hongwei.jetpack_compose_demo.view.components.SectionHeader
 import com.hongwei.jetpack_compose_demo.view.components.TextAndButtons
 import com.hongwei.jetpack_compose_demo.view.share.ColorsDemoSection
 

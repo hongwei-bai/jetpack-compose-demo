@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.hongwei.jetpack_compose_demo.view.components.SectionHeader
 import com.hongwei.jetpack_compose_demo.view.share.ColorsDemoSection
 
 @Composable

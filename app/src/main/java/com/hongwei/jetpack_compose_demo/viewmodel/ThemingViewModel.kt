@@ -14,7 +14,7 @@ import javax.inject.Inject
 class ThemingViewModel @Inject constructor(
     private val themingRepository: ThemingRepository
 ) : ViewModel() {
-    val teamTheme: LiveData<ThemeEntity> =
+    val theme: LiveData<ThemeEntity> =
         themingRepository.getTheme().asLiveData(viewModelScope.coroutineContext)
 
     fun switchTheme(id: Int) = viewModelScope.launch {

@@ -1,4 +1,4 @@
-package com.hongwei.jetpack_compose_demo.view.screens
+package com.hongwei.jetpack_compose_demo.view.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box

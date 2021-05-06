@@ -1,4 +1,4 @@
-package com.hongwei.jetpack_compose_demo.view
+package com.hongwei.jetpack_compose_demo.view.splash
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.MaterialTheme

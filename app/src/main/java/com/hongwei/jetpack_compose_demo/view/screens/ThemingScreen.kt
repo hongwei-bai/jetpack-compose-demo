@@ -25,7 +25,7 @@ fun ThemingScreen() {
         modifier = Modifier
             .verticalScroll(ScrollState(0))
     ) {
-        Banner(url = viewModel.teamTheme.observeAsState().value?.bannerUrl)
+        Banner(url = viewModel.theme.observeAsState().value?.bannerUrl)
         Spacer(modifier = Modifier.size(15.dp))
         ThemeOption(0, "Default MaterialTheme", viewModel)
         ThemeOption(1, "Customised Theme 1", viewModel)
@@ -48,7 +48,7 @@ fun ThemeOption(id: Int, name: String, viewModel: ThemingViewModel) {
             .border(20.dp, Color.Transparent)
     ) {
         RadioButton(
-            selected = viewModel.teamTheme.observeAsState().value?.themeId ?: -1 == id,
+            selected = viewModel.theme.observeAsState().value?.themeId ?: -1 == id,
             onClick = {
                 viewModel.switchTheme(id)
             })

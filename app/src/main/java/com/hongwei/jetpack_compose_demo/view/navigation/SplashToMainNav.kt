@@ -5,7 +5,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.hongwei.jetpack_compose_demo.view.SplashScreen
+import com.hongwei.jetpack_compose_demo.view.splash.SplashScreen
 import com.hongwei.jetpack_compose_demo.view.screens.MainScreen
 
 @OptIn(ExperimentalFoundationApi::class)

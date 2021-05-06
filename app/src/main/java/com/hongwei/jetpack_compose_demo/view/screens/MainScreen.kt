@@ -18,7 +18,7 @@ fun MainScreen(
     navController: NavHostController,
 ) {
     val viewModel = hiltNavGraphViewModel<ThemingViewModel>()
-    DemoTheme(viewModel.teamTheme.observeAsState().value) {
+    DemoTheme(viewModel.theme.observeAsState().value) {
         Scaffold(
             bottomBar = { BottomNavBar(navController) }
         ) {

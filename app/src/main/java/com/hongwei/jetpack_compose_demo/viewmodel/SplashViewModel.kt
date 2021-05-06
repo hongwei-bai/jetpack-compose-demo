@@ -16,7 +16,7 @@ class SplashViewModel @Inject constructor() : ViewModel() {
     fun countDown(onComplete: () -> Unit) {
         viewModelScope.launch {
             (3 downTo 0).forEach { i ->
-                delay(300)
+                delay(800)
                 viewModelScope.launch(Dispatchers.Main) {
                     counter.value = i
                 }
