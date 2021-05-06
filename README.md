@@ -4,6 +4,8 @@ Jetpack Compose Demo, applied along with Navigation, Dagger Hilt, BottomNavbar, 
 
 This demo is built to target as a Jetpack Compose reference project on its first Beta version (1.0.0-beta05)
 
+___
+
 ## Jetpack Compose Version: 1.0.0-beta05
 
 ## Screenshots
@@ -28,6 +30,8 @@ Online image loading with loading animation(Lottie)
 
 [package view.navigation](https://github.com/hongwei-bai/jetpack-compose-demo/tree/main/app/src/main/java/com/hongwei/jetpack_compose_demo/view/navigation)
 
+___
+
 #### Hilt
 
 ##### How to inject view model into a Composable?
@@ -44,6 +48,8 @@ class SplashViewModel @Inject constructor() : ViewModel()
 ```
 
 Also in [MainScreens.kt](https://github.com/hongwei-bai/jetpack-compose-demo/blob/main/app/src/main/java/com/hongwei/jetpack_compose_demo/view/screens/MainScreen.kt)
+
+___
 
 #### Image loading Library - Coil
 
@@ -71,6 +77,8 @@ when (painter.loadState) {
 }
 ```
 
+___
+
 #### Lottie
 
 [SplashScreen.kt](https://github.com/hongwei-bai/jetpack-compose-demo/blob/main/app/src/main/java/com/hongwei/jetpack_compose_demo/view/splash/SplashScreen.kt)
@@ -89,6 +97,8 @@ LottieAnimation(
 ```
 
 [Banner.kt](https://github.com/hongwei-bai/jetpack-compose-demo/blob/main/app/src/main/java/com/hongwei/jetpack_compose_demo/view/components/Banner.kt)
+
+___
 
 #### Splash Screen
 
@@ -109,6 +119,8 @@ import androidx.navigation.compose.popUpTo
 
 [SplashScreen.kt](https://github.com/hongwei-bai/jetpack-compose-demo/blob/main/app/src/main/java/com/hongwei/jetpack_compose_demo/view/splash/SplashScreen.kt)
 
+___
+
 #### Nested Navigation
 
 ##### Top level navigation:
@@ -118,6 +130,8 @@ import androidx.navigation.compose.popUpTo
 ##### Secondary level navigation:
 
 - Four tabs in main screens: Theming, Style, Component as well as About.
+
+___
 
 #### Bottom Navigation Bar
 
@@ -132,6 +146,8 @@ Scaffold(
     // Content
 }
 ```
+
+___
 
 #### Dynamic Theming
 
@@ -168,11 +184,13 @@ fun DemoTheme(
 
 [DemoTheme.kt](https://github.com/hongwei-bai/jetpack-compose-demo/blob/main/app/src/main/java/com/hongwei/jetpack_compose_demo/view/theme/DemoTheme.kt)
 
+___
 
 #### Customised Themes with Colors, Typography
 
 [package view.theme](https://github.com/hongwei-bai/jetpack-compose-demo/blob/main/app/src/main/java/com/hongwei/jetpack_compose_demo/view/theme)
 
+___
 
 #### How to use download fonts via Android Studio
 
@@ -186,6 +204,7 @@ fun DemoTheme(
 
 [res/font](https://github.com/hongwei-bai/jetpack-compose-demo/tree/main/app/src/main/res/font)
 
+___
 
 ## Minor interests - Libraries under this section are adopted in the project, but may not strongly bond to Jetpack Compose, so I will list them, but separately from other major ones.
 
@@ -195,6 +214,8 @@ fun DemoTheme(
 
 - Kotlin Coroutines
 
+___
+
 ## Learning Materials:
 
 - [Jetpack Compose Official Tutorials with content on left sidebar](https://developer.android.com/jetpack/compose/documentation)
@@ -202,6 +223,8 @@ fun DemoTheme(
 - [Playground](https://foso.github.io/Jetpack-Compose-Playground/material/textfield/)
 
 - [Tell you what is the counterpart in Jetpack](https://www.jetpackcompose.app/What-is-the-equivalent-of-RadioGroup-in-Jetpack-Compose)
+
+___
 
 ## Thanks
 
