@@ -26,6 +26,8 @@ class ThemingRepository @Inject constructor(
                 colorOnSecondary = Color.White.toLong(),
                 colorBackground = Color.White.toLong(),
                 colorOnBackground = Red900.toLong(),
+                colorBackgroundDark = Red900.toLong(),
+                colorOnBackgroundDark = Color.White.toLong()
             )
             2 -> ThemeEntity(
                 themeId = id,
@@ -36,6 +38,8 @@ class ThemingRepository @Inject constructor(
                 colorOnSecondary = 0xffffffff,
                 colorBackground = 0xffffffff,
                 colorOnBackground = 0xff04539c,
+                colorBackgroundDark = 0xff04539c,
+                colorOnBackgroundDark = 0xffffffff
             )
             3 -> ThemeEntity(
                 themeId = id,
@@ -46,6 +50,8 @@ class ThemingRepository @Inject constructor(
                 colorOnSecondary = 0xffffffff,
                 colorBackground = 0xffffffff,
                 colorOnBackground = 0xff542583,
+                colorBackgroundDark = 0xff542583,
+                colorOnBackgroundDark = 0xffffffff
             )
             else -> ThemeEntity(
                 themeId = id,
@@ -56,6 +62,8 @@ class ThemingRepository @Inject constructor(
                 colorOnSecondary = 0xffffffff,
                 colorBackground = 0xffffffff,
                 colorOnBackground = 0xffffffff,
+                colorBackgroundDark = 0xff000000,
+                colorOnBackgroundDark = 0xffffffff
             )
         }
         themeDao.save(theme)

@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "7d8a052e1233b62c25e7a8e0765667c2",
+    "identityHash": "35abaf7225b205209694bcbeaf8b2f51",
     "entities": [
       {
         "tableName": "theme",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`apiVersion` INTEGER NOT NULL, `themeId` INTEGER NOT NULL, `bannerUrl` TEXT NOT NULL, `colorPrimary` INTEGER NOT NULL, `colorOnPrimary` INTEGER NOT NULL, `colorSecondary` INTEGER NOT NULL, `colorOnSecondary` INTEGER NOT NULL, `colorBackground` INTEGER NOT NULL, `colorOnBackground` INTEGER NOT NULL, PRIMARY KEY(`apiVersion`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`apiVersion` INTEGER NOT NULL, `themeId` INTEGER NOT NULL, `bannerUrl` TEXT NOT NULL, `colorPrimary` INTEGER NOT NULL, `colorOnPrimary` INTEGER NOT NULL, `colorSecondary` INTEGER NOT NULL, `colorOnSecondary` INTEGER NOT NULL, `colorBackground` INTEGER NOT NULL, `colorOnBackground` INTEGER NOT NULL, `colorBackgroundDark` INTEGER NOT NULL, `colorOnBackgroundDark` INTEGER NOT NULL, PRIMARY KEY(`apiVersion`))",
         "fields": [
           {
             "fieldPath": "apiVersion",
@@ -61,6 +61,18 @@
             "columnName": "colorOnBackground",
             "affinity": "INTEGER",
             "notNull": true
+          },
+          {
+            "fieldPath": "colorBackgroundDark",
+            "columnName": "colorBackgroundDark",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "colorOnBackgroundDark",
+            "columnName": "colorOnBackgroundDark",
+            "affinity": "INTEGER",
+            "notNull": true
           }
         ],
         "primaryKey": {
@@ -76,7 +88,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '7d8a052e1233b62c25e7a8e0765667c2')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '35abaf7225b205209694bcbeaf8b2f51')"
     ]
   }
 }

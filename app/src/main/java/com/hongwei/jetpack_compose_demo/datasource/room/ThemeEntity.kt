@@ -30,5 +30,10 @@ data class ThemeEntity(
     val colorBackground: Long = 0xFFFFFFFF,
     @SerializedName("color_on_background")
     val colorOnBackground: Long = 0xFFFFFFFF,
+
+    @SerializedName("color_background_dark")
+    val colorBackgroundDark: Long = 0xFFFFFFFF,
+    @SerializedName("color_on_background_dark")
+    val colorOnBackgroundDark: Long = 0xFFFFFFFF,
 )
 

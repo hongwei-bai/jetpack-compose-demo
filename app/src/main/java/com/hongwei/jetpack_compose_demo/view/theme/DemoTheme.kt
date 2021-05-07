@@ -2,6 +2,7 @@ package com.hongwei.jetpack_compose_demo.view.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
+import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
@@ -22,20 +23,45 @@ fun DemoTheme(
             }
             MaterialTheme(
                 typography = typography,
-                colors = lightColors(
-                    primary = Color(theme.colorPrimary),
-                    primaryVariant = Color(theme.colorPrimary),
-                    onPrimary = Color(theme.colorOnPrimary),
-                    secondary = Color(theme.colorSecondary),
-                    secondaryVariant = Color(theme.colorSecondary),
-                    onSecondary = Color(theme.colorOnSecondary),
-                    background = Color(theme.colorBackground),
-                    onBackground = Color(theme.colorOnBackground)
-                ),
+                colors = if (darkTheme) {
+                    darkColors(
+                        primary = Color(theme.colorPrimary),
+                        primaryVariant = Color(theme.colorPrimary),
+                        onPrimary = Color(theme.colorOnPrimary),
+                        secondary = Color(theme.colorSecondary),
+                        secondaryVariant = Color(theme.colorSecondary),
+                        onSecondary = Color(theme.colorOnSecondary),
+                        background = Color(theme.colorBackgroundDark),
+                        onBackground = Color(theme.colorOnBackgroundDark),
+                        surface = Color(theme.colorBackgroundDark),
+                        onSurface = Color(theme.colorOnBackgroundDark)
+                    )
+                } else {
+                    lightColors(
+                        primary = Color(theme.colorPrimary),
+                        primaryVariant = Color(theme.colorPrimary),
+                        onPrimary = Color(theme.colorOnPrimary),
+                        secondary = Color(theme.colorSecondary),
+                        secondaryVariant = Color(theme.colorSecondary),
+                        onSecondary = Color(theme.colorOnSecondary),
+                        background = Color(theme.colorBackground),
+                        onBackground = Color(theme.colorOnBackground),
+                        surface = Color(theme.colorBackground),
+                        onSurface = Color(theme.colorOnBackground)
+                    )
+                },
                 content = content
             )
         } else {
-            MaterialTheme(content = content)
+            MaterialThemeByDarkMode(darkTheme, content)
         }
-    } ?: MaterialTheme(content = content)
+    } ?: MaterialThemeByDarkMode(darkTheme, content)
 }
+
+@Composable
+private fun MaterialThemeByDarkMode(darkTheme: Boolean, content: @Composable () -> Unit): Unit =
+    if (darkTheme) {
+        MaterialTheme(colors = darkColors(), content = content)
+    } else {
+        MaterialTheme(colors = lightColors(), content = content)
+    }
